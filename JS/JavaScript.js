@@ -43,7 +43,7 @@ $(document).ready(function(){
 	});
 	
 	$('#carousel-cover').carousel({
-			interval: 3000
+			interval: 6000
     });
 
 	$('#carousel-cover .item:first').addClass('active');
