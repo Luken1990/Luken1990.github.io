@@ -319,6 +319,23 @@ h1{
 	}
 }
 
+/*---RETOUCHING SECTION---*/
+
+#retouching {
+	min-height:100vh;
+	background:#171717;
+}
+
+#retouching .container{
+    padding-top: 5rem;
+    max-width:750px;
+}
+
+
+/*---RETOUCHING MEDIA QUERIES---*/
+
+
+
 
 /*---ABOUT SECTION---*/
 

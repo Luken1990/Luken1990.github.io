@@ -10,18 +10,27 @@ $(document).ready(function(){
 			$("#about").addClass("hidden");
 			$("#other-work").addClass("hidden");
 			$("#main").removeClass("hidden");
+            $("#retouching").addClass("hidden");
 		}
 		else if(category === "about"){
 			$("#about").removeClass("hidden");
 			$("#other-work").addClass("hidden");
 			$("#main").addClass("hidden");
+            $("#retouching").addClass("hidden");
 			$("#about .container .row .content-wrapper h2").addClass("animated fadeInDown");
 		}
 		else if(category === "websites"){
 			$("#about").addClass("hidden");
 			$("#main").addClass("hidden");
+            $("#retouching").addClass("hidden");
 			$("#other-work").removeClass("hidden");
 			$("#other-work .container h2").addClass("animated fadeInDown");
+		}
+        else if(category === "retouching"){
+			$("#about").addClass("hidden");
+			$("#main").addClass("hidden");
+            $("#other-work").addClass("hidden");
+			$("#retouching").removeClass("hidden");
 		}
 		else{
 			$("#main .container .row div").each(function(){
@@ -29,6 +38,7 @@ $(document).ready(function(){
 					$(this).hide().addClass("hidden");
 					$("#main").removeClass("hidden");
 					$("#about").addClass("hidden");
+                    $("#retouching").addClass("hidden");
 					$("#other-work").addClass("hidden");
 				}else{
 					$(this).fadeIn("slow").removeClass("hidden");	
@@ -47,4 +57,11 @@ $(document).ready(function(){
     });
 
 	$('#carousel-cover .item:first').addClass('active');
+    
+    $(window).on('load', function(){
+//      $("#retouching .container .imageFrame[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.0});
+      $('.twentytwenty-container').eq(0).twentytwenty({ default_offset_pct: 0.0 });
+      $('.twentytwenty-container').eq(1).twentytwenty();
+    });
+    
 });
