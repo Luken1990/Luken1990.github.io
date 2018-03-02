@@ -31,6 +31,7 @@ $(document).ready(function(){
 			$("#main").addClass("hidden");
             $("#other-work").addClass("hidden");
 			$("#retouching").removeClass("hidden");
+            $(window).trigger("resize");
 		}
 		else{
 			$("#main .container .row div").each(function(){
@@ -59,7 +60,6 @@ $(document).ready(function(){
 	$('#carousel-cover .item:first').addClass('active');
     
     $(window).on('load', function(){
-//      $("#retouching .container .imageFrame[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.0});
       $('.twentytwenty-container').eq(0).twentytwenty({ default_offset_pct: 0.0 });
       $('.twentytwenty-container').eq(1).twentytwenty();
     });
